@@ -12,5 +12,9 @@
 #' @importFrom Rcpp sourceCpp
 NULL
 add10 <- function(x) {
-   return(x + 1:10)
+  if(length(x) == 1) {
+    return(x + 1:10)
+  } else {
+    stop("input data-type is only scalar\n")
+  }
 }

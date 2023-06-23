@@ -18,3 +18,9 @@ add10 <- function(x) {
     stop("input data-type is only scalar\n")
   }
 }
+
+add20 <- function(x) {
+  assertthat::assert_that(length(x),1)
+  assertthat::assert_that(as.numeric(x),TRUE)
+  return(x + 1:20)
+}
